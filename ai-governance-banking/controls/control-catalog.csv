@@ -1,0 +1,50 @@
+control_id,control_name,control_objective,ai_rmf_subcategory,nist_800_53_ref,applies_to_tier,control_owner,test_method,frequency
+CAT-GOV-01,AI inventory maintained,All in-scope AI systems are registered and the record is current,GOVERN 1.6,PM-5;CM-8,All,AI Governance Manager,Sample discovery sources for unregistered systems and compare to inventory,Quarterly
+CAT-GOV-02,Tier assignment documented,Every registered system has an assigned tier with written rationale,GOVERN 1.3;MAP 1.5,RA-2,All,AI Governance Manager,Sample intake records for presence and adequacy of rationale,Quarterly
+CAT-GOV-03,Accountable executive named,Every system has a named owner with authority to suspend it,GOVERN 2.1,PM-29,All,AI Governance Manager,Inventory completeness check,Quarterly
+CAT-GOV-04,Pre-deployment approval,No in-scope system reaches production before its review completes,GOVERN 1.4,CM-3;SA-3,1;2;3,AI Governance Manager,Compare production deployment records to approval records,Quarterly
+CAT-GOV-05,Approval conditions tracked to closure,Conditions are specific owned and closed by their due date,MANAGE 1.3,CA-5,1;2;3,AI Governance Manager,Aging report on open conditions,Monthly
+CAT-GOV-06,Reassessment currency,Systems are reassessed on trigger and on cycle,GOVERN 1.5,CA-2,1;2;3,AI Governance Manager,Report percentage within cycle,Quarterly
+CAT-GOV-07,Decommissioning recorded,Retired systems are marked retired with data disposition documented,GOVERN 1.7,MP-6;SA-22,All,Use case owner,Sample retired systems for disposition evidence,Annual
+CAT-GOV-08,Exception governance,Exceptions are approved at the right level time bound and compensated,MANAGE 1.4,CA-5;PM-9,All,AI Governance Manager,Exception register review,Quarterly
+CAT-GOV-09,AI role based training,Personnel understand their AI responsibilities,GOVERN 2.2,AT-3,All,AI Governance Manager,Completion reporting,Annual
+CAT-GOV-10,Acceptable use policy attestation,Users acknowledge the AI acceptable use policy,GOVERN 2.2,PL-4,All,Human Resources,Attestation completion reporting,Annual
+CAT-GOV-11,Incident and near miss reporting,AI failures including near misses are reported and captured,GOVERN 4.3;MANAGE 4.3,IR-6,All,AI Governance Manager,Trend reported volume against expected,Quarterly
+CAT-GOV-12,Board and committee reporting,Governance bodies receive complete and timely AI risk reporting,GOVERN 2.3,PM-9,All,AI Governance Manager,Review of reporting pack and minutes,Quarterly
+CAT-GOV-13,Consumer feedback monitored,Complaints and feedback relating to AI outputs are captured and routed,GOVERN 5.1;MAP 5.2,PM-27,1;2,Compliance,Complaint taxonomy review,Quarterly
+CAT-DAT-01,Input data classified,Data classification is determined before deployment,MAP 4.1,RA-2;MP-3,1;2;3,Data Governance,Assessment review,Per assessment
+CAT-DAT-02,Training use prohibited contractually,Third party may not use bank data to train or improve models,MAP 4.1;GOVERN 6.1,SA-9;SR-3,1;2;3,Third Party Risk,Contract clause verification,Per contract and at renewal
+CAT-DAT-03,Processing location known and permitted,Inference and storage occur only in permitted geographies,GOVERN 6.1,SA-9;SC-7,1;2;3,Information Security,Vendor attestation and architecture review,Annual
+CAT-DAT-04,Retention defined for prompts and outputs,Retention is set consistent with the records schedule,GOVERN 1.4,SI-12;AU-11,1;2,Records Management,Configuration review,Annual
+CAT-DAT-05,DLP coverage of AI destinations,Sensitive data is prevented from reaching AI services,MEASURE 2.10,SC-7;SI-4,All,Information Security,DLP policy and alert review,Quarterly
+CAT-DAT-06,Data lineage and permitted use confirmed,Training and reference data are permitted for the stated purpose,MAP 4.1,PM-5;PT-2,1;2,Data Governance,Assessment review,Per assessment
+CAT-MOD-01,Model definition determination,Each system is assessed against the bank model definition,MAP 2.1,RA-3,1;2;3,Model Risk,Sample determinations,Quarterly
+CAT-MOD-02,Independent validation,Systems meeting the model definition receive independent validation,MEASURE 2.5;MEASURE 2.9,CA-2;SA-11,1;2,Model Risk,Validation currency report,Quarterly
+CAT-MOD-03,Evaluation protocol for generative systems,Generative systems are evaluated against a fixed versioned test set with thresholds,MEASURE 1.1;MEASURE 2.3,SA-11,1;2,Use case owner,Review protocol and results,Per release and annually
+CAT-MOD-04,Model card maintained,A current model card exists and reflects the deployed version,MAP 2.2;MEASURE 2.8,SA-5,1;2,Use case owner,Compare model card version to deployed version,Semiannual
+CAT-MOD-05,Limitations published to users,Known limitations are communicated to the people using the system,MAP 3.4,SA-5;PL-4,1;2,Use case owner,Review user facing materials,Annual
+CAT-FAI-01,Fairness testing performed,Protected class exposure is tested before deployment and on cycle,MEASURE 2.11,RA-3,1;2 where applicable,Compliance,Review test plan and results,Annual
+CAT-FAI-02,Less discriminatory alternative search,Alternatives are evaluated and documented where disparity is found,MEASURE 2.11,RA-3,1;2 where applicable,Compliance,Review documentation for identified disparities,Per occurrence
+CAT-FAI-03,Adverse action reasons accurate and specific,Principal reasons reflect the actual basis of the decision,MEASURE 2.8,SA-5,1,Compliance,Sample reason codes against decision drivers,Quarterly
+CAT-FAI-04,Human review of adverse decisions,No final adverse credit or account decision is fully automated,MAP 3.5,AC-3,1,Use case owner,Sample decisions for review evidence,Quarterly
+CAT-SEC-01,Prompt injection testing,Systems processing untrusted input are tested before deployment,MEASURE 2.7,CA-8;SA-11,1;2,Information Security,Review test results,Per release
+CAT-SEC-02,Entitlement aware retrieval,Retrieval respects the requesting user existing entitlements,MEASURE 2.7,AC-3;AC-6,1;2;3,Information Security,Access testing with segregated accounts,Semiannual
+CAT-SEC-03,Least privilege for agentic action,Every permitted action is enumerated and scoped,MANAGE 2.4,AC-6;CM-7,1;2,Information Security,Review action inventory against granted permissions,Semiannual
+CAT-SEC-04,Human confirmation for irreversible actions,Financial or irreversible actions require explicit human confirmation,MAP 3.5,AC-3,1;2,Use case owner,Configuration review and sampling,Quarterly
+CAT-SEC-05,Comprehensive logging,Prompts outputs model version user and sources are logged,MEASURE 2.7,AU-2;AU-3;AU-12,1;2,Information Security,Log completeness review,Quarterly
+CAT-SEC-06,Approved tools only,AI use occurs only through sanctioned tools,GOVERN 1.2,CM-7;SI-4,All,Information Security,CASB and proxy review for unsanctioned services,Monthly
+CAT-SEC-07,Secrets excluded from prompts,Credentials and keys are not entered into AI systems,MEASURE 2.7,IA-5;SC-28,All,Information Security,DLP pattern alerting,Continuous
+CAT-TPR-01,AI due diligence completed,AI specific due diligence is performed within third party risk,GOVERN 6.1;MAP 4.1,SA-9;SR-6,1;2;3,Third Party Risk,Review completed questionnaires,Per onboarding and renewal
+CAT-TPR-02,Model change notice contractual,Vendor must give notice before material model or provider change,MANAGE 3.1,SA-9;SR-8,1;2,Third Party Risk,Contract clause verification,Per contract
+CAT-TPR-03,Subprocessor and model provider disclosure,Fourth party model dependencies are known,GOVERN 6.1,SR-3;SR-8,1;2,Third Party Risk,Review disclosure and update dependency map,Annual
+CAT-TPR-04,Embedded AI discovery,AI features in existing software are identified and registered,GOVERN 1.6,CM-8;SA-9,All,AI Governance Manager,Annual vendor AI questionnaire and admin console review,Annual
+CAT-TPR-05,Default off for new AI features,New vendor AI functionality requires affirmative enablement,GOVERN 6.1,CM-7,All,Technology,Configuration review,Quarterly
+CAT-TPR-06,Third party AI contingency and exit,Failure and discontinuation scenarios are planned,GOVERN 6.2;MANAGE 3.1,CP-2;SA-9,1;2,Business Continuity,Review exit plan adequacy,Annual
+CAT-TPR-07,Concentration analysis,Dependency on a single model provider is measured and reported,GOVERN 6.2,SR-3,All,Third Party Risk,Dependency map analysis,Semiannual
+CAT-MNG-01,Monitoring plan active,Each system has an operating monitoring plan with thresholds,MANAGE 4.1,CA-7;SI-4,1;2;3,Use case owner,Review monitoring evidence,Quarterly
+CAT-MNG-02,Drift monitoring,Input and output drift are monitored against thresholds,MEASURE 2.3;MANAGE 4.1,CA-7,1;2,Use case owner,Review drift reporting,Quarterly
+CAT-MNG-03,Override rate monitored,Human override rate is tracked with a defined threshold,MAP 3.5;MANAGE 4.1,CA-7,1;2,Use case owner,Review override reporting,Quarterly
+CAT-MNG-04,Production output sampling,A defined share of outputs is reviewed by a qualified person,MEASURE 2.3,CA-7,1;2,Use case owner,Review sampling evidence,Quarterly
+CAT-MNG-05,Kill switch documented and tested,Deactivation is possible without a code release and has been tested,MANAGE 2.4,CP-10;IR-4,1;2,Use case owner,Review test evidence,Annual
+CAT-MNG-06,Change management for model updates,Model version changes follow change control and trigger reassessment,MANAGE 2.2,CM-3;CM-4,1;2,Technology,Compare version history to change records,Quarterly
+CAT-MNG-07,Disclosure to customers,Customer facing generative interactions disclose AI and offer a human path,GOVERN 1.1;MAP 5.2,PT-5,1,Compliance,Review customer facing experience,Semiannual
